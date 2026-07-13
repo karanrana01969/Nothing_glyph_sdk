@@ -1,0 +1,35 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle files
+.gradle/
+build/
+**/build/
+
+# Android Studio/IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Ignore specific large downloaded/extracted binaries in this project
+build-tools/
+jdk-*/
+openjdk-*.tar.gz
+gradle-*-bin.zip
+gradle-8.*/
+
+# Python Virtual Envs
+test_venv/
+
+# Existing ignores
+zip-cache/
+lib/
+venv/

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GLYPH"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"
+                android:letterSpacing="0.1" />
+
+            <Button
+                android:id="@+id/btnTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVERT"
+                android:backgroundTint="#333333"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Login Screen -->
+        <LinearLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AUTHENTICATION REQUIRED"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-monospace"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="16dp"
+                android:background="#222222"
+                android:textColorHint="#888888"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:background="#222222"
+                android:textColorHint="#888888"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+                
+            <EditText
+                android:id="@+id/etWsUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="WebSocket URL (wss://.../ws)"
+                android:inputType="textUri"
+                android:padding="16dp"
+                android:background="#222222"
+                android:textColorHint="#888888"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN &amp; CONNECT"
+                android:padding="16dp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Main Status Screen -->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STATUS: DISCONNECTED"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-monospace"
+                android:layout_marginBottom="24dp" />
+                
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open the Web UI to control the lights remotely. The screen will stay on to allow background control."
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="4dp" />
+                
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
